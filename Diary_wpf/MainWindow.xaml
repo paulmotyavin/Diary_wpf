@@ -1,0 +1,39 @@
+﻿<Window x:Class="Diary_wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Diary_wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.25*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <DatePicker x:Name="datepicker" VerticalAlignment="Bottom" Grid.ColumnSpan="2" FirstDayOfWeek="Monday" FontSize="14" IsTodayHighlighted="True" SelectedDateChanged="DatePicker_SelectedDateChanged" />
+        <TextBox x:Name="tbx_name" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Height="23" Grid.Column="1" FontSize="14"/>
+        <TextBlock x:Name="tbk_name" Grid.Column="1" TextWrapping="Wrap" Text="Название:" RenderTransformOrigin="0.196,0.43" Grid.Row="1" TextAlignment="Center" VerticalAlignment="Bottom" Height="23" FontSize="16"/>
+        <TextBox x:Name="tbx_description" Grid.Row="4" TextWrapping="Wrap" Grid.Column="1" Height="23"  VerticalAlignment="Top" FontSize="14" AutomationProperties.IsRowHeader="True"/>
+        <TextBlock x:Name="tbk_description" Grid.Column="1" TextWrapping="Wrap" Text="Описание:" RenderTransformOrigin="0.196,0.43" Grid.Row="3" TextAlignment="Center" VerticalAlignment="Center" Height="23" FontSize="16"/>
+        <Button Content="Удалить запись" Grid.Row="10" Grid.Column="0" Height="20" VerticalAlignment="Top" Click="Delete_Click"/>
+        <Button Content="Сохранить" Grid.Row="10" Grid.Column="1" HorizontalAlignment="Left" Width="170" VerticalAlignment="Top" Height="20" RenderTransformOrigin="0.489,0.026" Click="Save_Button"/>
+        <Button Content="Создать "  Grid.Row="10" Grid.Column="1" HorizontalAlignment="Right" Width="170" Height="20" VerticalAlignment="Top" Click="Create_Click" />
+        <ListBox x:Name="listbox" d:ItemsSource="{d:SampleData ItemCount=15}" Grid.Column="0" Grid.Row="1" Grid.RowSpan="9" SelectionChanged="listbox_SelectionChanged"/>
+
+    </Grid>
+</Window>
