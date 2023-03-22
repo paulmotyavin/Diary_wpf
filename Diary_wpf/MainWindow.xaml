@@ -30,9 +30,9 @@
         <TextBlock x:Name="tbk_name" Grid.Column="1" TextWrapping="Wrap" Text="Название:" RenderTransformOrigin="0.196,0.43" Grid.Row="1" TextAlignment="Center" VerticalAlignment="Bottom" Height="23" FontSize="16"/>
         <TextBox x:Name="tbx_description" Grid.Row="4" TextWrapping="Wrap" Grid.Column="1" Height="23"  VerticalAlignment="Top" FontSize="14" AutomationProperties.IsRowHeader="True"/>
         <TextBlock x:Name="tbk_description" Grid.Column="1" TextWrapping="Wrap" Text="Описание:" RenderTransformOrigin="0.196,0.43" Grid.Row="3" TextAlignment="Center" VerticalAlignment="Center" Height="23" FontSize="16"/>
-        <Button Content="Удалить запись" Grid.Row="10" Grid.Column="0" Height="20" VerticalAlignment="Top" Click="Delete_Click"/>
-        <Button Content="Сохранить" Grid.Row="10" Grid.Column="1" HorizontalAlignment="Left" Width="170" VerticalAlignment="Top" Height="20" RenderTransformOrigin="0.489,0.026" Click="Save_Button"/>
-        <Button Content="Создать "  Grid.Row="10" Grid.Column="1" HorizontalAlignment="Right" Width="170" Height="20" VerticalAlignment="Top" Click="Create_Click" />
+        <Button x:Name="delete" Content="Удалить запись" Grid.Row="10" Grid.Column="0" Height="20" VerticalAlignment="Top" Click="Delete_Click"/>
+        <Button x:Name="save" Content="Сохранить" Grid.Row="10" Grid.Column="1" HorizontalAlignment="Left" Width="170" VerticalAlignment="Top" Height="20" RenderTransformOrigin="0.489,0.026" Click="Save_Button"/>
+        <Button x:Name="create" Content="Создать "  Grid.Row="10" Grid.Column="1" HorizontalAlignment="Right" Width="170" Height="20" VerticalAlignment="Top" Click="Create_Click" />
         <ListBox x:Name="listbox" d:ItemsSource="{d:SampleData ItemCount=15}" Grid.Column="0" Grid.Row="1" Grid.RowSpan="9" SelectionChanged="listbox_SelectionChanged"/>
 
     </Grid>
